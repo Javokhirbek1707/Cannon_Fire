@@ -1,72 +1,55 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager _instance;
-    public static GameManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-                Debug.LogError("Game Manager is NULL!");
-            return _instance;
-        }
-    }
+    public static GameManager Instance;
 
-    private int _score;
-    private int _aliveMen = 11;
-    private bool _isGameOver = false;
+    int _score;
+    int _aliveMen = 11;
+    bool _gameOver;
 
     void Awake()
     {
-        _instance = this;
+        Instance = this;
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && _isGameOver == true)
-        {
+        if (_gameOver && Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(0);
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
     }
 
-    public void AddScore(int amount)
+    public void AddScore(int value)
     {
-        _score += amount;
+        _score += value;
         UIManager.Instance.UpdateScore(_score);
-    }
-
-    public int GetScore()
-    {
-        return _score;
     }
 
     public void OnManKilled()
     {
         _aliveMen--;
+
         if (_aliveMen <= 0)
         {
-            _isGameOver = true;
+            _gameOver = true;
             UIManager.Instance.ShowWin();
             UIManager.Instance.RestartText();
         }
     }
 
-
     public void OnShotsEmpty()
     {
         if (_aliveMen > 0)
         {
-            _isGameOver = true;
+            _gameOver = true;
             UIManager.Instance.ShowLose();
             UIManager.Instance.RestartText();
         }
+    }
+
+    public void UnlockTrajectory()
+    {
+        FindObjectOfType<Player>().UnlockTrajectory();
     }
 }

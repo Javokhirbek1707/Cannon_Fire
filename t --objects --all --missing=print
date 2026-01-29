@@ -1,0 +1,213 @@
+ .vsconfig                                          |     6 [32m+[m
+ Assets/AdditionalAssets.meta                       |     8 [32m+[m
+ Assets/AdditionalAssets/Cannon Mini Pack.meta      |     8 [32m+[m
+ .../Cannon Mini Pack/Materials.meta                |     8 [32m+[m
+ .../Materials/Projectiles&Tools.mat                |   139 [32m+[m
+ .../Materials/Projectiles&Tools.mat.meta           |     8 [32m+[m
+ .../Cannon Mini Pack/Materials/Small_Cannon.mat    |   139 [32m+[m
+ .../Materials/Small_Cannon.mat.meta                |     8 [32m+[m
+ .../AdditionalAssets/Cannon Mini Pack/Meshes.meta  |     8 [32m+[m
+ .../Cannon Mini Pack/Meshes/Bomb_Shot.FBX          |   Bin [31m0[m -> [32m42992[m bytes
+ .../Cannon Mini Pack/Meshes/Bomb_Shot.FBX.meta     |    92 [32m+[m
+ .../Cannon Mini Pack/Meshes/Cannon_Linstock.FBX    |   Bin [31m0[m -> [32m328864[m bytes
+ .../Meshes/Cannon_Linstock.FBX.meta                |    92 [32m+[m
+ .../Cannon Mini Pack/Meshes/Round_shot.FBX         |   Bin [31m0[m -> [32m24032[m bytes
+ .../Cannon Mini Pack/Meshes/Round_shot.FBX.meta    |    92 [32m+[m
+ .../Cannon Mini Pack/Meshes/Small_Cannon.FBX       |   Bin [31m0[m -> [32m1954608[m bytes
+ .../Cannon Mini Pack/Meshes/Small_Cannon.FBX.meta  |   112 [32m+[m
+ .../AdditionalAssets/Cannon Mini Pack/Prefabs.meta |     8 [32m+[m
+ .../Cannon Mini Pack/Prefabs/Bomb_Shot.prefab      |   102 [32m+[m
+ .../Cannon Mini Pack/Prefabs/Bomb_Shot.prefab.meta |     8 [32m+[m
+ .../Prefabs/Cannon_Linstock.prefab                 |   102 [32m+[m
+ .../Prefabs/Cannon_Linstock.prefab.meta            |     8 [32m+[m
+ .../Cannon Mini Pack/Prefabs/Round_shot.prefab     |   102 [32m+[m
+ .../Prefabs/Round_shot.prefab.meta                 |     8 [32m+[m
+ .../Cannon Mini Pack/Prefabs/Small_Cannon.prefab   |   390 [32m+[m
+ .../Prefabs/Small_Cannon.prefab.meta               |     8 [32m+[m
+ .../Cannon Mini Pack/Textures.meta                 |     8 [32m+[m
+ .../Textures/Projectiles_Tools_AO.tga              |   Bin [31m0[m -> [32m16778028[m bytes
+ .../Textures/Projectiles_Tools_AO.tga.meta         |    76 [32m+[m
+ .../Textures/Projectiles_Tools_Alb.tga             |   Bin [31m0[m -> [32m50331692[m bytes
+ .../Textures/Projectiles_Tools_Alb.tga.meta        |    76 [32m+[m
+ .../Textures/Projectiles_Tools_Mtl.tga             |   Bin [31m0[m -> [32m67108908[m bytes
+ .../Textures/Projectiles_Tools_Mtl.tga.meta        |    76 [32m+[m
+ .../Textures/Projectiles_Tools_N.tga               |   Bin [31m0[m -> [32m50331692[m bytes
+ .../Textures/Projectiles_Tools_N.tga.meta          |    76 [32m+[m
+ .../Cannon Mini Pack/Textures/Small_Cannon_AO.tga  |   Bin [31m0[m -> [32m16778028[m bytes
+ .../Textures/Small_Cannon_AO.tga.meta              |    76 [32m+[m
+ .../Cannon Mini Pack/Textures/Small_Cannon_Alb.tga |   Bin [31m0[m -> [32m50331692[m bytes
+ .../Textures/Small_Cannon_Alb.tga.meta             |    76 [32m+[m
+ .../Cannon Mini Pack/Textures/Small_Cannon_Mtl.tga |   Bin [31m0[m -> [32m67108908[m bytes
+ .../Textures/Small_Cannon_Mtl.tga.meta             |    76 [32m+[m
+ .../Cannon Mini Pack/Textures/Small_Cannon_N.tga   |   Bin [31m0[m -> [32m50331692[m bytes
+ .../Textures/Small_Cannon_N.tga.meta               |    76 [32m+[m
+ Assets/AdditionalAssets/FantasyEnvironments.meta   |     9 [32m+[m
+ .../FantasyEnvironments/Environments.meta          |     9 [32m+[m
+ .../Environments/Ambient-Occlusion-Trees.meta      |     9 [32m+[m
+ .../Environments/Ambient-Occlusion-Trees/FBX.meta  |     9 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Birch_tree1.fbx    |   Bin [31m0[m -> [32m67408[m bytes
+ .../FBX/Birch_tree1.fbx.meta                       |   124 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Birch_tree2.fbx    |   Bin [31m0[m -> [32m48720[m bytes
+ .../FBX/Birch_tree2.fbx.meta                       |   127 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Birch_tree3.fbx    |   Bin [31m0[m -> [32m56784[m bytes
+ .../FBX/Birch_tree3.fbx.meta                       |   127 [32m+[m
+ .../FBX/Deciduous_tree1.fbx                        |   Bin [31m0[m -> [32m82560[m bytes
+ .../FBX/Deciduous_tree1.fbx.meta                   |   124 [32m+[m
+ .../FBX/Deciduous_tree2.fbx                        |   Bin [31m0[m -> [32m88176[m bytes
+ .../FBX/Deciduous_tree2.fbx.meta                   |   124 [32m+[m
+ .../FBX/Deciduous_tree3.fbx                        |   Bin [31m0[m -> [32m57696[m bytes
+ .../FBX/Deciduous_tree3.fbx.meta                   |   124 [32m+[m
+ .../FBX/Deciduous_tree4.fbx                        |   Bin [31m0[m -> [32m67840[m bytes
+ .../FBX/Deciduous_tree4.fbx.meta                   |   124 [32m+[m
+ .../FBX/Deciduous_tree_stump.fbx                   |   Bin [31m0[m -> [32m95920[m bytes
+ .../FBX/Deciduous_tree_stump.fbx.meta              |   170 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Oak_tree1.fbx      |   Bin [31m0[m -> [32m85456[m bytes
+ .../Ambient-Occlusion-Trees/FBX/Oak_tree1.fbx.meta |   127 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Oak_tree2.fbx      |   Bin [31m0[m -> [32m80048[m bytes
+ .../Ambient-Occlusion-Trees/FBX/Oak_tree2.fbx.meta |   124 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Oak_tree3.fbx      |   Bin [31m0[m -> [32m68000[m bytes
+ .../Ambient-Occlusion-Trees/FBX/Oak_tree3.fbx.meta |   127 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Pine_stump.fbx     |   Bin [31m0[m -> [32m82736[m bytes
+ .../FBX/Pine_stump.fbx.meta                        |   182 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Pine_tree1.fbx     |   Bin [31m0[m -> [32m85680[m bytes
+ .../FBX/Pine_tree1.fbx.meta                        |   124 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Pine_tree2.fbx     |   Bin [31m0[m -> [32m96496[m bytes
+ .../FBX/Pine_tree2.fbx.meta                        |   124 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Pine_tree3.fbx     |   Bin [31m0[m -> [32m53296[m bytes
+ .../FBX/Pine_tree3.fbx.meta                        |   124 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Willow_tree1.fbx   |   Bin [31m0[m -> [32m72352[m bytes
+ .../FBX/Willow_tree1.fbx.meta                      |   124 [32m+[m
+ .../Ambient-Occlusion-Trees/FBX/Willow_tree2.fbx   |   Bin [31m0[m -> [32m70080[m bytes
+ .../FBX/Willow_tree2.fbx.meta                      |   124 [32m+[m
+ .../Ambient-Occlusion-Trees/Materials.meta         |     9 [32m+[m
+ .../Materials/Birch_bark.mat                       |    94 [32m+[m
+ .../Materials/Birch_bark.mat.meta                  |     9 [32m+[m
+ .../Materials/Birch_leaves.mat                     |    90 [32m+[m
+ .../Materials/Birch_leaves.mat.meta                |     9 [32m+[m
+ .../Materials/Deciduous_tree_stump.mat             |   136 [32m+[m
+ .../Materials/Deciduous_tree_stump.mat.meta        |     9 [32m+[m
+ .../Ambient-Occlusion-Trees/Materials/Oak_bark.mat |   105 [32m+[m
+ .../Materials/Oak_bark.mat.meta                    |     9 [32m+[m
+ .../Materials/Oak_leaves.mat                       |    90 [32m+[m
+ .../Materials/Oak_leaves.mat.meta                  |     9 [32m+[m
+ .../Materials/Pine_bark.mat                        |    93 [32m+[m
+ .../Materials/Pine_bark.mat.meta                   |     9 [32m+[m
+ .../Materials/Pine_leaves.mat                      |    90 [32m+[m
+ .../Materials/Pine_leaves.mat.meta                 |     9 [32m+[m
+ .../Materials/Pine_stump.mat                       |   136 [32m+[m
+ .../Materials/Pine_stump.mat.meta                  |     9 [32m+[m
+ .../Materials/Tree_bark1.mat                       |    98 [32m+[m
+ .../Materials/Tree_bark1.mat.meta                  |     9 [32m+[m
+ .../Materials/Tree_bark2.mat                       |   119 [32m+[m
+ .../Materials/Tree_bark2.mat.meta                  |     9 [32m+[m
+ .../Materials/Tree_leaves1.mat                     |   106 [32m+[m
+ .../Materials/Tree_leaves1.mat.meta                |     8 [32m+[m
+ .../Materials/Tree_leaves2.mat                     |    89 [32m+[m
+ .../Materials/Tree_leaves2.mat.meta                |     9 [32m+[m
+ .../Materials/Willow_bark.mat                      |    94 [32m+[m
+ .../Materials/Willow_bark.mat.meta                 |     9 [32m+[m
+ .../Materials/Willow_leaves.mat                    |   103 [32m+[m
+ .../Materials/Willow_leaves.mat.meta               |     9 [32m+[m
+ .../Ambient-Occlusion-Trees/Prefabs.meta           |     9 [32m+[m
+ .../Prefabs/Birch_tree1.prefab                     |   110 [32m+[m
+ .../Prefabs/Birch_tree1.prefab.meta                |    10 [32m+[m
+ .../Prefabs/Birch_tree2.prefab                     |   110 [32m+[m
+ .../Prefabs/Birch_tree2.prefab.meta                |    10 [32m+[m
+ .../Prefabs/Birch_tree3.prefab                     |   110 [32m+[m
+ .../Prefabs/Birch_tree3.prefab.meta                |    10 [32m+[m
+ .../Prefabs/Deciduous_tree1.prefab                 |   110 [32m+[m
+ .../Prefabs/Deciduous_tree1.prefab.meta            |    10 [32m+[m
+ .../Prefabs/Deciduous_tree2.prefab                 |   110 [32m+[m
+ .../Prefabs/Deciduous_tree2.prefab.meta            |     9 [32m+[m
+ .../Prefabs/Deciduous_tree3.prefab                 |   110 [32m+[m
+ .../Prefabs/Deciduous_tree3.prefab.meta            |     9 [32m+[m
+ .../Prefabs/Deciduous_tree4.prefab                 |   110 [32m+[m
+ .../Prefabs/Deciduous_tree4.prefab.meta            |    10 [32m+[m
+ .../Prefabs/Deciduous_tree_stump.prefab            |   337 [32m+[m
+ .../Prefabs/Deciduous_tree_stump.prefab.meta       |    10 [32m+[m
+ .../Prefabs/Oak_tree1.prefab                       |   110 [32m+[m
+ .../Prefabs/Oak_tree1.prefab.meta                  |    10 [32m+[m
+ .../Prefabs/Oak_tree2.prefab                       |   110 [32m+[m
+ .../Prefabs/Oak_tree2.prefab.meta                  |    10 [32m+[m
+ .../Prefabs/Oak_tree3.prefab                       |   110 [32m+[m
+ .../Prefabs/Oak_tree3.prefab.meta                  |    10 [32m+[m
+ .../Prefabs/Pine_stump.prefab                      |   406 [32m+[m
+ .../Prefabs/Pine_stump.prefab.meta                 |    10 [32m+[m
+ .../Prefabs/Pine_tree1.prefab                      |   132 [32m+[m
+ .../Prefabs/Pine_tree1.prefab.meta                 |    10 [32m+[m
+ .../Prefabs/Pine_tree2.prefab                      |   110 [32m+[m
+ .../Prefabs/Pine_tree2.prefab.meta                 |    10 [32m+[m
+ .../Prefabs/Pine_tree3.prefab                      |   110 [32m+[m
+ .../Prefabs/Pine_tree3.prefab.meta                 |    10 [32m+[m
+ .../Prefabs/Willow_tree1.prefab                    |   110 [32m+[m
+ .../Prefabs/Willow_tree1.prefab.meta               |    10 [32m+[m
+ .../Prefabs/Willow_tree2.prefab                    |   110 [32m+[m
+ .../Prefabs/Willow_tree2.prefab.meta               |    10 [32m+[m
+ .../Ambient-Occlusion-Trees/Textures.meta          |     9 [32m+[m
+ .../Textures/Birch_bark.png                        |   Bin [31m0[m -> [32m2888220[m bytes
+ .../Textures/Birch_bark.png.meta                   |    91 [32m+[m
+ .../Textures/Birch_leaves.tga                      |   Bin [31m0[m -> [32m4194348[m bytes
+ .../Textures/Birch_leaves.tga.meta                 |   103 [32m+[m
+ .../Ambient-Occlusion-Trees/Textures/Oak_bark.png  |   Bin [31m0[m -> [32m1444998[m bytes
+ .../Textures/Oak_bark.png.meta                     |    91 [32m+[m
+ .../Ambient-Occlusion-Trees/Textures/Pine_bark.png |   Bin [31m0[m -> [32m2683081[m bytes
+ .../Textures/Pine_bark.png.meta                    |    91 [32m+[m
+ .../Textures/Pine_leaves.tga                       |   Bin [31m0[m -> [32m4194348[m bytes
+ .../Textures/Pine_leaves.tga.meta                  |   103 [32m+[m
+ .../Textures/Tree_bark1.png                        |   Bin [31m0[m -> [32m4063779[m bytes
+ .../Textures/Tree_bark1.png.meta                   |    91 [32m+[m
+ .../Textures/Tree_bark2.png                        |   Bin [31m0[m -> [32m2080389[m bytes
+ .../Textures/Tree_bark2.png.meta                   |    91 [32m+[m
+ .../Textures/Tree_leaves1.tga                      |   Bin [31m0[m -> [32m4194348[m bytes
+ .../Textures/Tree_leaves1.tga.meta                 |   103 [32m+[m
+ .../Textures/Tree_leaves2.tga                      |   Bin [31m0[m -> [32m4194348[m bytes
+ .../Textures/Tree_leaves2.tga.meta                 |   103 [32m+[m
+ .../Textures/Willow_bark.png                       |   Bin [31m0[m -> [32m2103515[m bytes
+ .../Textures/Willow_bark.png.meta                  |    91 [32m+[m
+ .../Textures/Willow_leaves.tga                     |   Bin [31m0[m -> [32m4194348[m bytes
+ .../Textures/Willow_leaves.tga.meta                |   103 [32m+[m
+ .../Textures/oak_leaves.tga                        |   Bin [31m0[m -> [32m4194348[m bytes
+ .../Textures/oak_leaves.tga.meta                   |   103 [32m+[m
+ .../FantasyEnvironments/Environments/FBX.meta      |     9 [32m+[m
+ .../FantasyEnvironments/Environments/FBX/Bush1.fbx |   Bin [31m0[m -> [32m27088[m bytes
+ .../Environments/FBX/Bush1.fbx.meta                |   100 [32m+[m
+ .../FantasyEnvironments/Environments/FBX/Fern1.FBX |   Bin [31m0[m -> [32m23328[m bytes
+ .../Environments/FBX/Fern1.FBX.meta                |   100 [32m+[m
+ .../FantasyEnvironments/Environments/FBX/Fern2.fbx |   Bin [31m0[m -> [32m26912[m bytes
+ .../Environments/FBX/Fern2.fbx.meta                |   100 [32m+[m
+ .../FantasyEnvironments/Environments/FBX/Fern3.fbx |   Bin [31m0[m -> [32m31680[m bytes
+ .../Environments/FBX/Fern3.fbx.meta                |   100 [32m+[m
+ .../Environments/FBX/Flower1.fbx                   |   Bin [31m0[m -> [32m25760[m bytes
+ .../Environments/FBX/Flower1.fbx.meta              |   100 [32m+[m
+ .../Environments/FBX/Flower2.fbx                   |   Bin [31m0[m -> [32m26112[m bytes
+ .../Environments/FBX/Flower2.fbx.meta              |   100 [32m+[m
+ .../Environments/FBX/Flower3.FBX                   |   Bin [31m0[m -> [32m26176[m bytes
+ .../Environments/FBX/Flower3.FBX.meta              |   100 [32m+[m
+ .../Environments/FBX/Flower4.fbx                   |   Bin [31m0[m -> [32m22688[m bytes
+ .../Environments/FBX/Flower4.fbx.meta              |   100 [32m+[m
+ .../Environments/FBX/Flower5.fbx                   |   Bin [31m0[m -> [32m28736[m bytes
+ .../Environments/FBX/Flower5.fbx.meta              |   100 [32m+[m
+ .../Environments/FBX/Flower6.fbx                   |   Bin [31m0[m -> [32m28976[m bytes
+ .../Environments/FBX/Flower6.fbx.meta              |   100 [32m+[m
+ .../Environments/FBX/Flower7.fbx                   |   Bin [31m0[m -> [32m26240[m bytes
+ .../Environments/FBX/Flower7.fbx.meta              |   100 [32m+[m
+ .../Environments/FBX/Flower8.fbx                   |   Bin [31m0[m -> [32m28064[m bytes
+ .../Environments/FBX/Flower8.fbx.meta              |   100 [32m+[m
+ .../Environments/FBX/Flower9.fbx                   |   Bin [31m0[m -> [32m28432[m bytes
+ .../Environments/FBX/Flower9.fbx.meta              |   100 [32m+[m
+ .../Environments/FBX/Grass1.fbx                    |   Bin [31m0[m -> [32m22576[m bytes
+ .../Environments/FBX/Grass1.fbx.meta               |   100 [32m+[m
+ .../Environments/FBX/Grass2.fbx                    |   Bin [31m0[m -> [32m22688[m bytes
+ .../Environments/FBX/Grass2.fbx.meta               |   100 [32m+[m
+ .../Environments/FBX/Grass3.fbx                    |   Bin [31m0[m -> [32m22688[m bytes
+ .../Environments/FBX/Grass3.fbx.meta               |   100 [32m+[m
+ .../Environments/FBX/Grass4.fbx                    |   Bin [31m0[m -> [32m22496[m bytes
+ .../Environments/FBX/Grass4.fbx.meta               |   100 [32m+[m
+ .../Environments/FBX/Mushroom1.fbx                 |   Bin [31m0[m -> [32m32688[m bytes
+ .../Environments/FBX/Mushroom1.fbx.meta            |   100 [32m+[m
+ .../Environments/FBX/Mushroom2.FBX                 |   Bin [31m0[m -> [32m32496[m bytes
+ .../Environments/FBX/Mushroom2.FBX.meta            |   100 [32m+[m
+ .../Environments/FBX/Mushroom3.fbx                 |   Bin [31m0[m -> [32m33632[m bytes
+ .../Environments/FBX/Mushroom3.fbx.meta            |   100 [32m+[m
+ .../Environments/FBX/Mushroom4.FBX                 |   Bin [31m0[m -> [32m32000[m bytes
+ .../Environments/FBX/Mushroom4.FBX.meta            |   100 [32m+

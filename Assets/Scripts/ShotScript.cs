@@ -6,6 +6,8 @@ public class ShotScript : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
+        GameManager.Instance.UnlockTrajectory();
+
         if (collision.gameObject.TryGetComponent(out ManScript target))
         {
             target.Hit();
