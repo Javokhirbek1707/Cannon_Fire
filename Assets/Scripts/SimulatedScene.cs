@@ -12,18 +12,14 @@ public class SimulatedScene : MonoBehaviour
     [SerializeField] private int _steps = 60;
     [SerializeField] private float _timeStep = 0.05f;
     [SerializeField] private LayerMask _groundMask;
-    [SerializeField] private float _groundBounceLoss = 0.6f; // energy loss
-
+    [SerializeField] private float _groundBounceLoss = 0.6f; 
     private ShotScript _ghost;
     private Rigidbody _ghostRB;
     private Vector3[] _points;
 
     private void Awake()
     {
-        _scene = SceneManager.CreateScene(
-            "SimulatedPhysicsScene",
-            new CreateSceneParameters(LocalPhysicsMode.Physics3D)
-        );
+        _scene = SceneManager.CreateScene("SimulatedPhysicsScene",new CreateSceneParameters(LocalPhysicsMode.Physics3D));
 
         _physicsScene = _scene.GetPhysicsScene();
 
@@ -42,7 +38,6 @@ public class SimulatedScene : MonoBehaviour
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Obstacle"))
             CloneIntoSimScene(go);
 
-        // Clone ground (IMPORTANT)
         int groundLayer = LayerMask.NameToLayer("Ground");
         var all = FindObjectsOfType<Transform>(true);
         foreach (var t in all)
@@ -117,10 +112,8 @@ public class SimulatedScene : MonoBehaviour
             _points[i] = currPos;
             pointCount++;
 
-            // MANUAL GROUND BOUNCE
             if (RaycastGround(prevPos, currPos, out RaycastHit hit))
             {
-                // snap to hit point
                 _ghostRB.position = hit.point;
 
                 // reflect velocity using ground normal
@@ -149,12 +142,6 @@ public class SimulatedScene : MonoBehaviour
         if (dist < 0.0001f)
             return false;
 
-        return _physicsScene.Raycast(
-            from,
-            dir.normalized,
-            out hit,
-            dist,
-            _groundMask
-        );
+        return _physicsScene.Raycast(from,dir.normalized,out hit,dist,_groundMask);
     }
 }

@@ -75,11 +75,7 @@ public class Player : MonoBehaviour
 
         _nextFireTime = Time.time + _fireRate;
 
-        ShotScript shot = Instantiate(
-            _shotPrefab,
-            _firePoint.position,
-            _firePoint.rotation
-        );
+        ShotScript shot = Instantiate(_shotPrefab,_firePoint.position,_firePoint.rotation);
 
         shot.ApplyImpulse(_firePoint.forward * _force);
         GameManager.Instance.OnShotUsed();
