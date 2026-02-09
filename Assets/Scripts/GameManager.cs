@@ -3,53 +3,94 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    private static GameManager _instance;
+    public static GameManager Instance => _instance;
 
-    int _score;
-    int _aliveMen = 11;
-    bool _gameOver;
+    [SerializeField] private int _startingShots = 20;
+    [SerializeField] private int _scorePerMan = 50;
 
-    void Awake()
+    private int _shotsLeft;
+    private int _menLeft;
+    private int _score;
+    private bool _gameOver;
+
+    public bool GameOver => _gameOver;
+
+    private void Awake()
     {
-        Instance = this;
+        if (_instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        _instance = this;
     }
 
-    void Update()
+    private void Start()
     {
-        if (_gameOver && Input.GetKeyDown(KeyCode.R))
-            SceneManager.LoadScene(0);
-    }
+        _menLeft = FindObjectsByType<ManScript>(FindObjectsSortMode.None).Length;
 
-    public void AddScore(int value)
-    {
-        _score += value;
+        _shotsLeft = _startingShots;
+        UIManager.Instance.UpdateShots(_shotsLeft);
         UIManager.Instance.UpdateScore(_score);
     }
 
-    public void OnManKilled()
+    private void Update()
     {
-        _aliveMen--;
+        if (_gameOver && Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-        if (_aliveMen <= 0)
-        {
-            _gameOver = true;
-            UIManager.Instance.ShowWin();
-            UIManager.Instance.RestartText();
-        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+            QuitApplication();
+
     }
 
-    public void OnShotsEmpty()
+    public void QuitApplication()
     {
-        if (_aliveMen > 0)
-        {
-            _gameOver = true;
-            UIManager.Instance.ShowLose();
-            UIManager.Instance.RestartText();
-        }
+        Application.Quit();
+        Debug.Log("Application Quit requested");
     }
 
-    public void UnlockTrajectory()
+    public void OnShotUsed()
     {
-        FindObjectOfType<Player>().UnlockTrajectory();
+        if (_gameOver) return;
+
+        _shotsLeft--;
+        UIManager.Instance.UpdateShots(_shotsLeft);
+
+        if (_shotsLeft <= 0 && _menLeft > 0)
+            Lose();
+    }
+
+    public void OnManDestroyed(ManScript man)
+    {
+        if (_gameOver) return;
+
+        _menLeft--;
+        _score += _scorePerMan;
+
+        UIManager.Instance.UpdateScore(_score);
+
+        if (_menLeft <= 0)
+            Win();
+    }
+
+    private void Win()
+    {
+        _gameOver = true;
+        UIManager.Instance.ShowWin();
+        UIManager.Instance.RestartText();
+    }
+
+    private void Lose()
+    {
+        _gameOver = true;
+        UIManager.Instance.ShowLose();
+        UIManager.Instance.RestartText();
+    }
+
+    public void OnManDestroyed()
+    {
+        OnManDestroyed(null);
     }
 }
